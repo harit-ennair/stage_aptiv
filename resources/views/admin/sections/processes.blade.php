@@ -597,12 +597,7 @@ function createProcessTableRow(process) {
                 ${formattedDate}
             </td>
             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                <button onclick="viewProcessDetails(${process.id})" class="text-blue-600 hover:text-blue-900 mr-3" title="Voir les détails">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                    </svg>
-                </button>
+
                 <button onclick="editProcess(${process.id})" class="text-aptiv-orange-600 hover:text-aptiv-orange-900 mr-3" title="Modifier">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
@@ -751,10 +746,10 @@ function debounce(func, wait) {
 }
 
 // Action functions (these integrate with existing modal functions)
-function viewProcessDetails(processId) {
-    console.log('View process details:', processId);
-    // You can implement a details modal here
-}
+// function viewProcessDetails(processId) {
+//     console.log('View process details:', processId);
+//     // You can implement a details modal here
+// }
 
 function editProcess(processId) {
     console.log('Edit process:', processId);
