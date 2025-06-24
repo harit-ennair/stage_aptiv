@@ -397,6 +397,13 @@ class AdminDashboard {
 
     // Process Management
     async loadProcesses() {
+        // Check if enhanced processes functionality is available
+        if (typeof loadProcessesData === 'function') {
+            loadProcessesData();
+            return;
+        }
+        
+        // Fallback to original functionality
         const loadingEl = document.getElementById('processes-loading');
         const tableEl = document.getElementById('processes-table');
         const mobileEl = document.getElementById('processes-mobile');
